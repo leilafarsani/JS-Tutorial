@@ -221,7 +221,7 @@ In small groups answer the following the questions.
 Try to solve each exercise before running code to verify answer. 
 Try to explain your answer using what you learned above about scope.
 Think about the order JavaScript will execute each piece of code and 
-what the values will be at each stage. */
+what the values will be at each stage.
 // 1.
 function one() {
   var a = 10;
@@ -274,4 +274,4 @@ function six() {
   console.log(f); // what is the value of f and why
 }
 
-six();
+six(); */
