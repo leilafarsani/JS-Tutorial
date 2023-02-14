@@ -17,7 +17,7 @@ and use that from now on. :::
 BONUS: there is a third way of running JS code (notice how I haven't 
 said scipt) - do you know what that is?
  */
-console.log("Hello World!")
+console.log("Hello World!");
 /*
 EXERCISE
 (This exercise will help you expand your understanding of console.log)
@@ -28,4 +28,16 @@ For example:
 Halo, dunia! // Indonesian
 Ciao, mondo! // Italian
 Hola, mundo! // Spanish
- */
+
+Note that,
+You can run node by itself, which will open a node console, 
+also called a Read–Eval–Print Loop (REPL).
+This console allows you to enter code in the console line by line 
+and is a great way of testing bits of code before writing it in a script. 
+Each time you press enter, it will print out what the expression you typed evaluates to.
+In your terminal, run the command node and then enter a line of code from the code below
+and then run enter. Do this for each line of code in the list.
+
+Comments:
+What is comments, how do we make them, why they are useful.
+It helps for code reading and reviewing for others and ourselves in the future, debugging,  */
