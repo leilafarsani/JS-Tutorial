@@ -104,7 +104,7 @@ let item = ["Egg", 0.25, 12];
 //let name = item[0];
 //let price = item[1];
 //let quantity = item[2];
-let [name, quantity, price] = item;
+let [name, price, quantity] = item;
 console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`);
 console.log(" ");
 /*Exercise 2
@@ -214,9 +214,13 @@ console.log(
 console.log(...other);
 console.log(other);
 console.log(so);
-/*Did you know that destructuring can also be used on objects as well.
 
-We can use destructuring to extract values from an object and assign them to variables in one line.
+
+/*H/W
+Did you know that destructuring can also be used on objects as well.
+
+We can use destructuring to extract values from an object and assign
+ them to variables in one line.
 
 ```
 let person = {
@@ -229,17 +233,19 @@ let { firstName, lastName } = person;
 console.log(`Batman is ${firstName}, ${lastName}`);
 ```
 
-The program above will print `Batman is Bruce Wayne`. Notice how we use the `{}` characters since it is an object rather than `[]` which is used when it is an array.
+The program above will print `Batman is Bruce Wayne`. Notice how we use the `{}`
+characters since it is an object rather than `[]` which is used when it is an array.
 
 # Exercise
 
 - What is the syntax to destructure the object `personOne` in exercise-1.js?
-- Update the argument of the function `introduceYourself` to use destructuring on the object that gets passed in.
+- Update the argument of the function `introduceYourself` to use destructuring
+ on the object that gets passed in.
  */
 const personOne = {
-  name: "Popeye",
-  age: 34,
-  favouriteFood: "Spinach",
+  name1: "Popeye",
+  age1: 34,
+  favouriteFood1: "Spinach",
 };
 const { name1, age1, favouriteFood1 } = personOne;
 function introduceYourself(obj) {
@@ -251,9 +257,11 @@ function introduceYourself(obj) {
 introduceYourself(personOne);
 /*# Exercise 2
 
-_Need some help? Refresh your memory with [this article](https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/)_
+_Need some help? Refresh your memory with [this article]
+(https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/)_
 
-In `exercise-2.js`, you have an array that contains a list of people who are at Hogwarts School of Witchcraft and Wizardry.
+In `exercise-2.js`, you have an array that contains a list of people who are
+at Hogwarts School of Witchcraft and Wizardry.
 For each character you have the following information:
 
 - First Name
@@ -264,7 +272,8 @@ For each character you have the following information:
 
 ## Task 1
 
-- In `exercise-2.js` write a program that will take the `hogwarts` array as input and display the names of the people who belong to the Gryffindor house.
+- In `exercise-2.js` write a program that will take the `hogwarts` 
+ array as input and display the names of the people who belong to the Gryffindor house.
 - Use array destructuring to extract the values you need out of the array.
 
 ### Expected result
@@ -279,7 +288,8 @@ Albus Dumbledore
 
 ## Task 2
 
-- In `exercise-2.js` write a program that will take the `hogwarts` array as input and display the names of teachers who have pets.
+- In `exercise-2.js` write a program that will take the `hogwarts` array 
+as input and display the names of teachers who have pets.
 - Use array destructuring to extract the values you need out of the array.
 
 ### Expected result
@@ -433,21 +443,21 @@ console.log(`\nTotal: ${totalCost.toFixed(2)}`);*/
 
 console.log("QTY".padEnd(10) + "ITEM".padEnd(20) + "TOTAL");
 
-const { totalCost, orderDetails } = order.reduce(
+const { totalCost, orderItems} = order.reduce(
   (accumulator, item) => {
     const totalItemCost = item.quantity * item.unitPrice;
     accumulator.totalCost += totalItemCost;
-    accumulator.orderDetails.push({
+    accumulator.orderItems.push({
       qty: item.quantity,
       itemName: item.itemName,
       total: totalItemCost.toFixed(2),
     });
     return accumulator;
   },
-  { totalCost: 0, orderDetails: [] }
+  { totalCost: 0, orderItems: [] }
 );
 
-orderDetails.forEach(({ qty, itemName, total }) =>
+orderItems.forEach(({ qty, itemName, total }) =>
   console.log(`${qty.toString().padEnd(10)}${itemName.padEnd(20)}${total}`)
 );
 
@@ -467,3 +477,24 @@ console.log(`\nTotal: ${totalCost.toFixed(2)}`);
 };
 
 giveTheReceipt(order);*/
+
+
+const myVehicle = {
+  brand: "Ford",
+  model: "Mustang",
+  color: "red",
+};
+
+const updateMyVehicle = {
+  type: "car",
+  year: 2021,
+  color: "yellow",
+};
+
+const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
+console.log(myUpdatedVehicle);
+
+const myNumbers = [1, 2, 3, 4, 5, 6];
+
+const [nOne, nTwo, ...rest] = numbers;
+console.log(...rest);
