@@ -203,3 +203,267 @@ const [[student6, student7, student8], student9, [student10, student11]] =
   evenMoreStudents;
 console.log(student6, student7, student8, student9, student10, student11);
 console.log(" ");
+
+let family = ["Homer", "Marge", "Bart", "Lisa", "Lilia"];
+
+let [da, mu, so, ...other] = family;
+
+console.log(
+  `In the this family, ${da} and ${mu} are the parents. ${so} is the son`
+);
+console.log(...other);
+console.log(other);
+console.log(so);
+/*Did you know that destructuring can also be used on objects as well.
+
+We can use destructuring to extract values from an object and assign them to variables in one line.
+
+```
+let person = {
+    firstName: "Bruce",
+    lastName: "Wayne"
+}
+
+let { firstName, lastName } = person;
+
+console.log(`Batman is ${firstName}, ${lastName}`);
+```
+
+The program above will print `Batman is Bruce Wayne`. Notice how we use the `{}` characters since it is an object rather than `[]` which is used when it is an array.
+
+# Exercise
+
+- What is the syntax to destructure the object `personOne` in exercise-1.js?
+- Update the argument of the function `introduceYourself` to use destructuring on the object that gets passed in.
+ */
+const personOne = {
+  name: "Popeye",
+  age: 34,
+  favouriteFood: "Spinach",
+};
+const { name1, age1, favouriteFood1 } = personOne;
+function introduceYourself(obj) {
+  console.log(
+    `Hello, my name is ${name1}. I am ${age1} years old and my favourite food is ${favouriteFood1}.`
+  );
+}
+
+introduceYourself(personOne);
+/*# Exercise 2
+
+_Need some help? Refresh your memory with [this article](https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/)_
+
+In `exercise-2.js`, you have an array that contains a list of people who are at Hogwarts School of Witchcraft and Wizardry.
+For each character you have the following information:
+
+- First Name
+- Last Name
+- School House
+- Pet
+- Occupation
+
+## Task 1
+
+- In `exercise-2.js` write a program that will take the `hogwarts` array as input and display the names of the people who belong to the Gryffindor house.
+- Use array destructuring to extract the values you need out of the array.
+
+### Expected result
+
+```
+Harry Potter
+Ron Weasley
+Hermione Granger
+Minerva McGonagall
+Albus Dumbledore
+```
+
+## Task 2
+
+- In `exercise-2.js` write a program that will take the `hogwarts` array as input and display the names of teachers who have pets.
+- Use array destructuring to extract the values you need out of the array.
+
+### Expected result
+
+```
+Albus Dumbledore
+```
+ */
+let hogwarts = [
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    house: "Gryffindor",
+    pet: "Owl",
+    occupation: "Student",
+  },
+  {
+    firstName: "Ron",
+    lastName: "Weasley",
+    house: "Gryffindor",
+    pet: "Scabbers",
+    occupation: "Student",
+  },
+  {
+    firstName: "Hermione",
+    lastName: "Granger",
+    house: "Gryffindor",
+    pet: "Cat",
+    occupation: "Student",
+  },
+  {
+    firstName: "Draco",
+    lastName: "Malfoy",
+    house: "Slytherin",
+    pet: null,
+    occupation: "Student",
+  },
+  {
+    firstName: "Cedric",
+    lastName: "Diggory",
+    house: "HufflePuff",
+    pet: null,
+    occupation: "Student",
+  },
+  {
+    firstName: "Severus",
+    lastName: "Snape",
+    house: "Slytherin",
+    pet: null,
+    occupation: "Teacher",
+  },
+  {
+    firstName: "Filius",
+    lastName: "Flitwick",
+    house: "Ravenclaw",
+    pet: null,
+    occupation: "Teacher",
+  },
+  {
+    firstName: "Pomona",
+    lastName: "Sprout",
+    house: "Hufflepuff",
+    pet: null,
+    occupation: "Teacher",
+  },
+  {
+    firstName: "Minerva",
+    lastName: "McGonagall",
+    house: "Gryffindor",
+    pet: null,
+    occupation: "Teacher",
+  },
+  {
+    firstName: "Albus",
+    lastName: "Dumbledore",
+    house: "Gryffindor",
+    pet: "Phoenix",
+    occupation: "Teacher",
+  },
+];
+
+const peopleOfTheGryffindorFinder = (arr) => {
+  let peopleOfTheGryffindor = arr.filter(
+    (people) => people.house === "Gryffindor"
+  );
+  peopleOfTheGryffindor.forEach((people) => {
+    const { firstName, lastName } = people;
+    console.log(`${firstName} ${lastName}`);
+  });
+};
+peopleOfTheGryffindorFinder(hogwarts);
+
+const teacherWithPetsFinder = (arr) => {
+  let teacherWithPets = arr.filter(
+    (people) => people.occupation === "Teacher" && people.pet !== null
+  );
+  teacherWithPets.forEach((people) => {
+    const { firstName, lastName } = people;
+    console.log(`${firstName} ${lastName}`);
+  });
+};
+
+/*OR
+const teacherWithPetsFinder = (arr) => {
+  let teacherWithPets = arr.filter((people) => people.occupation === "Teacher");
+  teacherWithPets.forEach((people) => {
+    const { firstName, lastName, pet } = people;
+    if (pet) console.log(`${firstName} ${lastName}`);
+  });
+};*/
+teacherWithPetsFinder(hogwarts);
+
+/*Write a program that will print out the receipt for this order.
+- Log each individual item to the console.
+- Log the total cost of the order to the console.
+
+## Expected result
+
+```
+QTY     ITEM                TOTAL
+1       Hot Cakes           2.29
+2       Apple Pie           2.78
+1       Egg McMuffin        2.80
+1       Sausage McMuffin    3.00
+2       Hot Coffee          2.00
+4       Hash Brown          1.60
+
+Total: 14.47 */
+let order = [
+  { itemName: "Hot cakes", quantity: 1, unitPrice: 2.29 },
+  { itemName: "Apple Pie", quantity: 2, unitPrice: 1.39 },
+  { itemName: "Egg McMuffin", quantity: 1, unitPrice: 2.8 },
+  { itemName: "Sausage McMuffin", quantity: 1, unitPrice: 3.0 },
+  { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
+  { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
+];
+/*console.log("QTY\tITEM\t\t\tTOTAL");
+
+let totalCost = 0;
+for (let i = 0; i < order.length; i++) {
+  //const item = order[i];
+  const totalItemCost = order[i].quantity * order[i].unitPrice;
+  totalCost += totalItemCost;
+
+  console.log(
+    `${order[i].quantity}\t${order[i].itemName}\t\t${totalItemCost.toFixed(2)}`
+  );
+}
+
+console.log(`\nTotal: ${totalCost.toFixed(2)}`);*/
+
+console.log("QTY".padEnd(10) + "ITEM".padEnd(20) + "TOTAL");
+
+const { totalCost, orderDetails } = order.reduce(
+  (accumulator, item) => {
+    const totalItemCost = item.quantity * item.unitPrice;
+    accumulator.totalCost += totalItemCost;
+    accumulator.orderDetails.push({
+      qty: item.quantity,
+      itemName: item.itemName,
+      total: totalItemCost.toFixed(2),
+    });
+    return accumulator;
+  },
+  { totalCost: 0, orderDetails: [] }
+);
+
+orderDetails.forEach(({ qty, itemName, total }) =>
+  console.log(`${qty.toString().padEnd(10)}${itemName.padEnd(20)}${total}`)
+);
+
+console.log(`\nTotal: ${totalCost.toFixed(2)}`);
+/*const giveTheReceipt = (orders) => {
+  console.log("QTY".padEnd(10) + "Item".padEnd(20) + "Total");
+  let orderCost = 0;
+  orders.forEach((order) => {
+    const { itemName, quantity, unitPrice } = order;
+    const total = quantity * unitPrice;
+    orderCost += total;
+    console.log(
+      `${quantity.toString().padEnd(10)}${itemName.padEnd(20)}${total}`
+    );
+  });
+  console.log(`\nTotal: ${orderCost}`);
+};
+
+giveTheReceipt(order);*/
