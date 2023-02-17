@@ -462,6 +462,25 @@ orderItems.forEach(({ qty, itemName, total }) =>
 );
 
 console.log(`\nTotal: ${totalCost.toFixed(2)}`);
+/* The above code takes an array of orders and calculates the total cost of the orders,
+ and also creates an array of order details that includes the quantity, item name,
+and total cost for each order.
+Here is a brief overview of what this code does:
+The reduce function is used to iterate over each item in the order array.
+For each item, the code calculates the total cost by multiplying the quantity
+of the item by the unit price.
+The total cost for each item is added to the totalCost property of the accumulator object.
+An object containing the quantity, item name, and total cost is added to the orderDetails 
+array of the accumulator object.
+The reduce function returns the accumulator object, which now contains the total cost and
+order details for all the items in the order array.
+The orderDetails array is iterated using the forEach function to log the order details 
+for each item to the console. The toString method is used to convert the quantity to a string,
+and the padEnd method is used to ensure that the output is aligned in columns.
+Overall, this code is a useful implementation for calculating the total cost and order
+details for an array of orders.
+*/
+//OR
 /*const giveTheReceipt = (orders) => {
   console.log("QTY".padEnd(10) + "Item".padEnd(20) + "Total");
   let orderCost = 0;
