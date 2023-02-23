@@ -2,9 +2,13 @@
 It is programming tradition that the first thing you do in any 
 language is make it output 'Hello world!'.
 We'll do this in JavaScript, using a command called console.log(). 
-The console.log() method writes a message to the console.
+The console.log() method (log is method or console.log is method ?)))
+writes a message to the console.
 The console is a tool which is mainly used to log information - it's
  useful for testing purposes.
+
+- The log() method writes (logs) a message to the console.
+- The log() method is useful for testing purposes.
  EXERCISE
 (This exercise will help you understand how to run a basic JS script 
 and explore the different ways you can run JS code)
@@ -32,6 +36,10 @@ Hola, mundo! // Spanish
 Note that,
 You can run node by itself, which will open a node console, 
 also called a Read–Eval–Print Loop (REPL).
+A read–eval–print loop (REPL), also termed an interactive toplevel or language shell,
+is a simple interactive computer programming environment that takes single user inputs,
+ executes them, and returns the result to the user; a program written in a REPL environment
+is executed piecewise
 This console allows you to enter code in the console line by line 
 and is a great way of testing bits of code before writing it in a script. 
 Each time you press enter, it will print out what the expression you typed evaluates to.
