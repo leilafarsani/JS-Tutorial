@@ -6,7 +6,7 @@ Any unit of code that can be evaluated to a value is known as an expression.
 
 We say that an expression evaluates to a value. We use expressions all the time in lot of different places:
 
-they can be assigned to variables
+they CAN be assigned to variables
 returned from functions (more on this later)
 passed as arguments to functions (more on this later)
 combined with other expressions to form new expressions
