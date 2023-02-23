@@ -5,9 +5,10 @@ so you don't have to write out the same value every time.
 We can use a variable to create a reference to a value. Variables 
 can be thought of as named containers. You can place data into these 
 containers and then refer to the data simply by naming the container.
-Before you use a variable in a JavaScript program, you must declare it. 
-Variables are declared with let and const keywords as follows.
+Declaring a JavaScript Variable
+Creating a variable in JavaScript is called "declaring" a variable.
 
+Before you use a variable in a JavaScript program, you must declare it. 
 4 Ways to Declare a JavaScript Variable:
 Using var
 Using let
@@ -40,19 +41,33 @@ Names must begin with a letter.
 Names can also begin with $ and _ (but we will not use it in this tutorial).
 Names are case sensitive (y and Y are different variables).
 Reserved words (like JavaScript keywords) cannot be used as names.
+Use descriptive names
 
+Note
+It's a good programming practice to declare all variables at the beginning of a script.
+
+After the declaration, the variable has no value (technically it is undefined).
+Value = undefined
+In computer programs, variables are often declared without a value.
+The value can be something that has to be calculated, 
+or something that will be provided later, like user input.
+let carName;
+
+A variable declared without a value will have the value undefined.
+
+The variable carName will have the value undefined after the execution of this statement:
+To assign a value to the variable, use the equal sign:
+You can also assign a value to the variable when you declare it:
 The Assignment Operator
 The assignment (=) operator is used to assign a value to a variable. The assignment operation
 evaluates to the assigned value. Chaining the assignment operator is possible 
 in order to assign a single value to multiple variables.
 In JavaScript, the equal sign (=) is an "assignment" operator,
 not an "equal to" operator.
-
 This is different from algebra. The following does not make sense in algebra:
 x = x + 5
 In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to x.
 (It calculates the value of x + 5 and puts the result into x. The value of x is incremented by 5.)
-
 let x = 5;
 let y = 10;
 let z = 25;
@@ -62,6 +77,10 @@ x = y = z; // x, y and z are all 25
 Note
 The "equal to" operator is written like == in JavaScript.
 
+One Statement, Many Variables
+You can declare many variables in one statement.
+
+Start the statement with let and separate the variables by comma:
 Addition assignment (+=)
 The addition assignment (+=) operator adds the value of the right operand to a variable 
 and assigns the result to the variable. The types of the two operands determine
@@ -162,3 +181,21 @@ let greetings = "How are you doing?"
 console.log(greetings);
 console.log(greetings);
 console.log(greetings);
+/*Re-Declaring JavaScript Variables
+If you re-declare a JavaScript variable declared with var, 
+it will not lose its value.
+The variable carName will still have the value "Volvo" after the 
+execution of these statements: */
+var car = "Volvo";
+var car = "BMW";
+console.log(car);
+/*Note
+You cannot re-declare a variable declared with let or const.
+
+This will not work:
+
+let carName = "Volvo";
+let carName; */
+
+//P.S https://www.syncfusion.com/blogs/post/10-javascript-naming-conventions-every-developer-should-know.aspx
+//https://arcticicestudio.github.io/styleguide-javascript/rules/naming_conventions.html#camelcase
