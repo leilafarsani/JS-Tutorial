@@ -1,0 +1,43 @@
+Statements and expressions
+In JavaScript, sections of code can be called expressions and statements. We will use these words frequently to describe code.
+
+Expression
+Any unit of code that can be evaluated to a value is known as an expression.
+
+We say that an expression evaluates to a value. We use expressions all the time in lot of different places:
+
+they can be assigned to variables
+returned from functions (more on this later)
+passed as arguments to functions (more on this later)
+combined with other expressions to form new expressions
+The following are all examples of expressions:
+
+1 + 1; // evaluates to 2
+("hello"); // evaluates to "hello"
+2 * 4; // evaluates to 8
+"Hello" + "World"; // evaluates to "HelloWorld"
+
+We can take the value produced by an expression and assign it to a variable.
+
+let total = 1 + 1; // assign the value 2 (the value produced by the expression 1 + 1) to a variable total
+let greeting = "hello"; // assign the value "hello" 
+(the value produced by the expression expression "hello") to a variable greeting
+let product = 2 * 4; // assign the value 8 (the value produced by the expression 2 * 4) to a variable product
+let worldGreeting = "Hello" + "World"; // assign the value "HelloWorld" 
+(the value produced by the expression "Hello" + "World" to a variable worldGreeting)
+
+Remember it can only be an expression if you can place it on the right hand side of an assignment.
+
+
+Statement
+A statement is some code that typically carries out an instruction. 
+You have encountered statements already:
+const greeting = "Hello Code Your Future!";
+The above piece of code is a variable declaration, which is also a statement. 
+This statement is an instruction to store the value
+"Hello Code Your Future!" in the variable greeting.
+
+There are other different types of statements such as an if statement.
+
+Read More Here  
+https://www.joshwcomeau.com/javascript/statements-vs-expressions/ 
