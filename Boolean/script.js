@@ -116,4 +116,4 @@ Call your function with a number of different inputs to check your function
 is working as expected. 😄
 
 Bonus: Can you ensure your function doesn't
-use an if statement for this exercise 😎 */
+use an if statement for this exercise 😎*/
