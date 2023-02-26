@@ -99,4 +99,23 @@ function moodMessage(mood) {
 }
 console.log(moodMessage(4));
 
+/*A common mistake when using the logical OR operator in conditional statements is to try to state the variable whose value you are checking once, and then give a list of values it could be to return true, separated by || (OR) operators. For example:
 
+if (x === 5 || 7 || 10 || 20) {
+  // run my code
+}
+In this case, the condition inside if () will always evaluate to true since 7 (or any other non-zero value) always evaluates to true. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test on either side of each OR operator:
+
+if (x === 5 || x === 7 || x === 10 || x === 20) {
+  // run my code
+} 
+
+The conditional (ternary) operator is the only JavaScript operator 
+that takes three operands: a condition followed by a question mark (?),
+then an expression to execute if the condition is truthy followed by
+a colon (:), and finally the expression to execute if the condition is falsy.
+This operator is frequently used as an alternative to an if...else statement.
+
+Syntax
+condition ? exprIfTrue : exprIfFalse
+*/
