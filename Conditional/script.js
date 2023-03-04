@@ -119,3 +119,6 @@ This operator is frequently used as an alternative to an if...else statement.
 Syntax
 condition ? exprIfTrue : exprIfFalse
 */
+let x = 15;
+let y = 7;
+x>y? console.log("x is greater than y") : console.log("x");

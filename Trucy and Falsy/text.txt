@@ -1,0 +1,57 @@
+Truthy and falsy
+In JavaScript, things can be set to or evaluated as true or false. 
+We've already met this idea. The boolean data type has two possible 
+values: true or false. But in JavaScript values may be truthy or falsy.
+
+In JavaScript, a truthy value is a value that is considered true when 
+encountered in a Boolean context. All values are truthy unless they are 
+defined as falsy. That is, all values are truthy except false, 0, -0, 0n,
+ "", null, undefined, and NaN. ~ MDN, 'Truthy'
+
+So in other words, the value is treated as if it is true or false. 
+The value is 'coerced' into true or false. Let's look at how this
+affects an if statement.
+
+
+Null and undefined
+
+Both null and undefined are falsy values,
+but have some important differences.
+
+Undefined means the variable has been declared,
+but its value has not been assigned. Null means
+an empty value or a blank value. The typeof() operator
+returns undefined for an undefined variable. The typeof() 
+operator returns the type as an object for a variable
+whose value is assigned as null.
+
+
+
+let thisUndefinedVariable;
+let thisNullVariable = null;
+
+undefined means the variable has been declared, 
+but is undefined. No value, not even 0 or null,
+has been assigned to this variable.
+
+null means the variable has been assigned the value null.
+
+If a variable has never been declared, and you try to call it,
+what will the console say?
+Make a prediction, either by writing in chat or writing it
+on piece of paper and holding it up.
+Try calling a nonexistent variable in your console now.
+
+We're spending a little time on this now because the most 
+common error you will encounter as a JavaScript programmer 
+is Uncaught TypeError: Cannot read property of undefined. 
+In fact 9 of the top 10 most common errors are to do with 
+null or undefined. (The other one is CORS, more about this
+in future modules.) As you progress through the course you
+will incrementally develop your understanding of these concepts,
+often through debugging!
+
+TIP
+You won't often assign null to a variable. However you will often
+encounter null in DOM traversal, so we will come back to this later.
+
