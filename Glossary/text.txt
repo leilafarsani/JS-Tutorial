@@ -7,4 +7,14 @@ Parameter: a placeholder for values you can pass into functions
 Primitive type: a built-in type in JavaScript 
 (e.g. strings and numbers are primitive types in JavaScript)
 Script: a file that contains a program
-Terminal: another word for "console"
+Terminal: another word for console.
+
+Glossary
+Assert: to determine whether something is true or not true, more precisely false
+Duplicate: exact copies of something (e.g. two or more files, numbers,
+directory can be exactly the same)
+Index: numbers that let you know an item's position inside an array
+Element: another name for an item in an array
+Iterate: to repeat some code multiple times, as we do when we use a loop
+REPL: (Read-Eval-Print-Loop) an interactive way to execute code you write inside the console
+Zero-based Index: an array starting at 0 and not at 1
