@@ -149,4 +149,4 @@ function example() {
 }
 
 // Question ?
-// how is ternary without else, or better to say binary :)))))
+// how is ternary without else, or better to say binary :))
