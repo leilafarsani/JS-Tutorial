@@ -122,3 +122,31 @@ condition ? exprIfTrue : exprIfFalse
 let x = 15;
 let y = 7;
 x>y? console.log("x is greater than y") : console.log("x");
+
+/*Conditional chains
+The ternary operator is right-associative, which means it can be "chained" 
+in the following way, similar to an if … else if … else if … else chain:
+
+function example() {
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
+} would be as follows with ternary operator*/ 
+function example() {
+  return condition1
+    ? value1
+    : condition2
+    ? value2
+    : condition3
+    ? value3
+    : value4;
+}
+
+// Question ?
+// how is ternary without else, or better to say binary :)))))

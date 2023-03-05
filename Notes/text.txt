@@ -1,0 +1,14 @@
+We cant change string by index like arrays.
+ It's because string is primitive type so they are immutable
+ However, arrays are reference type so they are mutable and we can change some
+ elements of it by [index].
+
+ We can change string with replace method.
+
+ Question?
+ Why we cant define our variable in for loop with const
+
+In for loop we can't use const because the value of 
+variable is modified by increment one until the condition is false.
+However, in for of loop the constant variable(random) 
+hold each values of that array.

@@ -393,16 +393,52 @@
 //   }
 // }
 
-function isEven(number) {
-    return number % 2 === 0;
-}
-console.log(isEven(11));
+// function isEven(number) {
+//     return number % 2 === 0;
+// }
+// console.log(isEven(11));
 
-let isHappy = true;
+// let isHappy = true;
 
-if (0) {
-  console.log("I am happy 😄");
-} else {
-  console.log("I am not happy 😢");
-}
+// if (0) {
+//   console.log("I am happy 😄");
+// } else {
+//   console.log("I am not happy 😢");
+// }
+//0 1 2 3 4 5
+// function getSum (n){
+//   let i=3;
+//   let sum=0;
+//   while(i<=n) {
+//     sum = sum+i;
+//     i++;
+// }
+//  return sum;
+// }
+// console.log(getSum(2));
 
+// let number = 5;
+// do{
+// console.log(number);
+// number++;
+// } while (number <= 4);
+
+// function getAdd (n){
+// let sum = 0;
+// for (let i=0; i<=n; i++) {
+//   sum = sum+i;
+// }
+// return sum;
+// }
+// console.log(getAdd(3));
+// let friends = ["Leila", "Sally", "Jessica"];
+
+// for (const friend of friends) {
+//   console.log(friend);
+// }
+// let myName = "HELLO";
+// myName =myName.replace("HELLO", "hi" );
+// console.log(myName); 
+// friends[2] = "Jessi";
+// console.log(friends[2]);
+// console.log(friends);
