@@ -1,0 +1,167 @@
+Array methods
+Do you remember how strings have special functions called methods? 
+Here's an example to jog your memory:
+
+$ node
+> let name = "Daniel";
+undefined
+> name.toLowerCase()
+daniel
+
+ Arrays also have several methods that you can use.
+
+ .sort()
+An array method that sorts the values in an array
+into ascending alphabetical or numerical order.
+
+.concat()
+Adds (or concatenates) another value or array to the array.
+
+$ node
+> let arr = [1, 2, 3];
+undefined
+> arr.concat(4)
+[1, 2, 3, 4]
+> arr
+[1, 2, 3]
+
+Did you notice how calling the concat method did not change arr? 
+This is because concat, like most array methods, returns a new array;
+it does not alter the array you called the method on.
+
+If you want to use the array returned by calling .concat() you 
+should store it in a new variable.
+
+.slice()
+Returns a slice of the array.
+You can tell .slice() where you want the slice to begin and end by
+passing it two parameters.
+
+$ node
+> let arr = [0, 1, 2, 3, 4]
+undefined
+> arr.slice(0, 2)
+[0, 1]
+> ["a", "b", "c", "d"].slice(1, 2)
+['b']
+
+.includes()
+Returns true if a value is in the array.
+
+.join()
+Returns all the array values joined together in a string.
+By default, this method takes no parameters and then the
+elements are divided with a comma ,. If you provide it with 
+a string parameter though, then it becomes the divider of 
+the elements, like the example below: */
+
+$ node
+> ["H", "e", "l", "l", "o"].join();
+'H,e,l,l,o'
+> ["H", "e", "l", "l", "o"].join("--");
+'H--e--l--l--o'
+
+There is a string method .split(). In an interactive console 
+try using the string .split() method and the array .join().
+How could they work together?
+
+EXERCISE
+Use the array of the people from your table (or breakout room)
+Combine it with another array filled with the names from another table
+console.log the names in alphabetical order
+Create a new value with the 2nd, 3rd and 4th people in it
+Create a function that takes a name and an array of names and returns
+a string. If the name is not in an array, it should return <name>
+is not sitting at the table with <people in the array>. If the name 
+is in the array, it should return <name> is sitting at the table with 
+<people in the array>.
+
+Array map
+Imagine you have an array of names...
+
+const mentors = ["Daniel ", "irina ", " Gordon", "ashleigh "];
+
+You notice that the names are not formatted consistently.
+To fix the array you decide you need to trim whitespace and
+convert to lowercase. How do you do that for every value in the array?
+We can write a function that changes one name:
+
+function tidy(name) {
+  return name.trim().toLowerCase();
+}
+
+Now you need to run every name in the array through this function
+and update the array values. Thankfully there is an array method
+that does just this!
+
+.map()
+Runs every item in the array through a function and returns 
+a new array with the values returned by the function.
+
+Have a look at this other example:
+
+function double(number) {
+  return number * 2;
+}
+
+const numbers = [1, 2, 3];
+const numbersDoubled = numbers.map(double);
+
+The map() method runs the function we provided (double) on each 
+item in the array and uses the return values to create a new array. 
+In the example numbersDoubled is a new array containing [2, 4, 6].
+Pay special attention to the map() method. You will use it a lot.
+
+Array forEach
+The .forEach() method seems similar to .map() but it does not return 
+a new array. Therefore .forEach() is only useful if you want to 
+perform side effects.
+
+Side effects
+Generally, functions should take an input and return an 
+output (based on that input), and not do anything else.
+
+When functions meet this criteria they can be called pure functions.
+
+A pure function does not:
+
+access any data unless it was passed in as a parameter
+change data declared outside the function
+interacts with anything outside of the function (e.g. logs a message to the console, shows a message on a website, saves data to disk)
+These are all example of side effects. Of course, from time to time, we will need to perform side effects, but we should try to avoid side effects in functions and only have them when absolutely necessary.
+
+.forEach()
+Say we want to log to the console a list of names
+
+EXERCISE
+You can drive in the UK at the age of 17.
+
+Write another function that takes a birth year and returns a 
+string Born in {year} can drive or Born in {year} can drive in {x} years
+Use the array of birth years, [ 1964, 2008, 1999, 2005, 1978, 1985, 1919 ],
+to get an array of strings saying if these people can drive
+console.log the answers
+
+Array filter
+EXERCISE
+Create a function which:
+
+Takes an array of birthYears
+Uses console.log to print the message These are the birth years 
+of people who can drive: <filtered birth years>
+Returns an array of people who can drive (remember, you can drive
+if you are 17 years or older)
+
+.find()
+EXERCISE
+Create a function which:
+
+Takes an array of names as a parameter
+Looks to see if your name is in the array
+If it is, return Found me!; if not, return Haven't found me :(
+
+Chaining
+Notice how we were able to write one method after another
+e.g. names.map(formatName).forEach(log)? This is called method chaining.
+You can call .forEach() after .map() because .map() returns a new array.
+
