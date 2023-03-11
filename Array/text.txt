@@ -1,0 +1,66 @@
+Array properties
+
+
+Arrays, like strings, have a length property. The length is the number of items in the array.
+You can check this by starting a node console in your terminal.
+
+$ node
+> let arr = [1, 2, 3];
+undefined
+> arr
+[1, 2, 3]
+> arr.length
+3
+
+Manipulating arrays
+You can get a single value out of an array using bracket notation.
+
+$ node
+> let ingredients = ["Flour", "Water", "Salt"];
+undefined
+> ingredients[0]
+Flour
+> ingredients[1]
+Water
+> ingredients.length
+3
+
+Did you notice how we use [0] to get the first value? 
+In programming we count starting at zero. This is called zero-indexing.
+The number inside the brackets is called an index. Index means the
+position of the item within the array.
+You can set a value using bracket notation and an assignment operator (=).
+
+const scores = [80, 41, 47];
+
+scores[2] = 29; // Change the last score
+scores[3] = 51; // Add a new score
+
+EXERCISE
+Create an array with the names of the people in your group
+console.log out the names and how many people are in the group
+Put someone from another group at the beginning of the array
+Add someone else to the end of the list
+
+
+Working with Arrays
+
+When working with lists, you often need to manipulate, enhance,
+ or search the information in that list.
+
+Some examples of things you might want to do with a list of data:
+
+Only use the first 10 items in a list
+Get people from a list whose name starts with a M
+Find the first person in a list to be over 100 years old
+Arrange people in a list alphabetically
+Get the last 10 items in an array
+Add all the numbers up in a list
+Get all the cats in an array of animals
+From a list of numbers, add a £ sign prefix
+Combine a list of romance films and thrillers
+
+EXERCISE
+Working as a group - use the MDN documentation on arrays to see if you 
+can find what methods might be useful to achieving the above examples.
+
