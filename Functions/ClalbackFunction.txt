@@ -1,0 +1,74 @@
+Callback functions
+A function that we provide to a method is called a callback function.
+The term highlights that although we provide the double function,
+the .map() method calls it. (Notice how we never write double() 
+to call the function).
+We'll see callback functions used a lot more in the coming weeks.
+When a function is only needed for a map operation, developers will 
+often declare the callback function inside the method call.
+Let's try copying and pasting the function declaration inside 
+the .map() method call.
+
+const numbers = [1, 2, 3];
+const numbersDoubled = numbers.map(function double(number) {
+  return number * 2;
+});
+
+We can make this a bit easier to read by removing the function
+name to declare an anonymous function. We can do this because
+we are not using the function anywhere else in the code, 
+so we don't need the function name to reference it. We've
+named the returned array numbersDoubled, so it's clear what is going only
+
+const numbers = [1, 2, 3];
+const numbersDoubled = numbers.map(function (number) {
+  return number * 2;
+});
+
+The arrow function syntax declares a function without the 
+function keyword. (There are some other differences between
+arrow functions and regular functions that you will learn
+about at a much later stage.)
+
+There is another thing you can do to make your code simpler. 
+Remove the braces ({}) from an arrow function and the body 
+of the function will be returned without needing to write 
+the return keyword.
+
+const numbers = [1, 2, 3];
+const numbersDoubled = numbers.map((number) => number * 2);
+
+The expression number * 2 is automatically returned because 
+it comes directly after the => arrow (instead of coming after
+curly braces). This is called an implicit return.
+
+EXERCISE
+I have a function defined below as:
+
+function abracaFunction(yourFunc) {
+  console.log(
+    "I am abracaFunction! Watch as I mutate an array of strings to your heart's content!"
+  );
+  const abracaArray = [
+    "James",
+    "Elamin",
+    "Ismael",
+    "Sanyia",
+    "Chris",
+    "Antigoni",
+  ];
+
+  const abracaOutput = yourFunc(abracaArray);
+
+  return abracaOutput;
+}
+
+This function does not need to be modified. Can you pass
+in a callback function which will mutate abracaArray such that it:
+Upper cases all letters in the array
+
+EXERCISE
+Modify your callback function from the previous exercise so that it also:
+
+Sorts abracaArray in alphabetical order
+
