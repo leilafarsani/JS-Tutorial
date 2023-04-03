@@ -127,10 +127,45 @@ A pure function does not:
 
 access any data unless it was passed in as a parameter
 change data declared outside the function
-interacts with anything outside of the function (e.g. logs a message to the console, shows a message on a website, saves data to disk)
-These are all example of side effects. Of course, from time to time, we will need to perform side effects, but we should try to avoid side effects in functions and only have them when absolutely necessary.
+interacts with anything outside of the function 
+(e.g. logs a message to the console, shows a message on a website, saves data to disk)
+These are all example of side effects. Of course, from time to time, we will need 
+to perform side effects, but we should try to avoid side effects in functions and 
+only have them when absolutely necessary.
+
+In JavaScript, a side effect refers to any modification that a function 
+or expression makes to the state of the program outside of its own scope, 
+or any observable interaction with the outside world. This can include:
+
+Modifying global variables
+Modifying the properties of objects passed as arguments to the function
+Modifying elements in the DOM
+Making network requests or interacting with external APIs
+Writing to the console or modifying browser cookies
+
+Side effects can have unintended consequences and can make code harder
+to reason about, test, and debug. In functional programming, minimizing 
+side effects is a key principle to writing clean, maintainable code.
+By keeping functions pure and avoiding side effects, we can make code 
+more predictable and easier to reason about.
 
 .forEach()
+forEach() has a side effect, as it modifies the state of the program by 
+executing the provided function on each element of the array. The provided 
+function can have side effects itself, such as modifying global variables or
+performing other operations that affect the state of the program outside of the function.
+
+Although forEach() is a built-in method of arrays in JavaScript and is often
+used in practice, it is generally considered to be less "functional" than methods
+like map(), reduce(), or filter(), which return a new array instead of modifying 
+the existing one. By returning a new array instead of modifying the existing one,
+these methods have fewer side effects and can be easier to reason about and test.
+
+If you need to use forEach() in your code, it's important to be aware of its
+potential side effects and to carefully design your code to handle them. 
+You should also consider whether a different method might be a better fit for your use case.
+
+
 Say we want to log to the console a list of names
 
 EXERCISE

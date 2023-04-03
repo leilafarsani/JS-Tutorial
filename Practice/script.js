@@ -6,16 +6,16 @@
 
 // console.log(x);
 // var x;
-names=["Mar","Amy","Lei","Hen","Sagh","Far"]
+// names=["Mar","Amy","Lei","Hen","Sagh","Far"]
 
- function secondMatchesAmy(array) {
-  if (array.includes("Hen" )) {
-    return "Second element matched!";
-  }
-  return "Second element not matched";
-}
+//  function secondMatchesAmy(array) {
+//   if (array.includes("Hen" )) {
+//     return "Second element matched!";
+//   }
+//   return "Second element not matched";
+// }
 
-console.log(secondMatchesAmy(names));
+// console.log(secondMatchesAmy(names));
 
 // const trainees = ["Ahmed", "Maria", "Atanas", "Nahidul", "Jack"];
 
@@ -25,7 +25,7 @@ console.log(secondMatchesAmy(names));
 // }
 // }
 // getName(trainees);
-num =[2,5,6,8,100]
+// let num =[2,5,6,8,100];
 
 // function getSquare(numArray){
 //   let array=[];
@@ -48,3 +48,5 @@ num =[2,5,6,8,100]
 
 // console.log(getEvenNums(num));
 
+let job = "teacher";
+console.log(job.length);
