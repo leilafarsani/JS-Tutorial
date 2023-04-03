@@ -69,6 +69,26 @@ const giveTheReceipt = (orders) => {
 
 giveTheReceipt(order);*/
 
+/*The splice() method changes the contents of an array by 
+removing or replacing existing elements and/or adding new elements in place.
+To access part of an array without modifying it 
+
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)*/
+const myMonths = ['Jan', 'March', 'April', 'June'];
+myMonths.splice(1, 0, 'Feb');
+// Inserts at index 1
+console.log(myMonths);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+myMonths.splice(4, 1, 'May');
+// Replaces 1 element at index 4
+console.log(myMonths);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
 /*join
 The join() method creates and returns a new string by concatenating all
 of the elements in an array (or an array-like object), separated by commas
@@ -339,11 +359,11 @@ some action based on each element. If you need to create a new array with
 modified elements, you can use methods like map() or filter(). */
 
 //Say we want to log to the console a list of names and their index.
-const names = ["Daniel", "mozafar", "irina"];
+const naames = ["Daniel", "mozafar", "irina"];
 
 //We can use .forEach() to go through the array,
 // and call a function we provide.
-names.forEach(function (name, index) {
+naames.forEach(function (name, index) {
   console.log(index+1 + ": " + name);
 });
 /*EXERCISE
